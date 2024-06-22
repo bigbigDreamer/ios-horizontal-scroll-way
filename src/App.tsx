@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import './App.css'
 
 
@@ -11,6 +12,33 @@ const couponData = [
 ]
 
 function App() {
+
+  useEffect(() => {
+
+    const scrollContainer = document.querySelector('.wrapper')
+    scrollContainer.addEventListener('touchstart', (event) => {
+      const startX = event.touches[0].pageX;
+      const startY = event.touches[0].pageY;
+    
+      scrollContainer.addEventListener('touchmove', (event) => {
+        const moveX = event.touches[0].pageX;
+        const moveY = event.touches[0].pageY;
+    
+        const diffX = moveX - startX;
+        const diffY = moveY - startY;
+    
+        if (Math.abs(diffX) > Math.abs(diffY)) {
+          console.log(event.cancelable)
+          if (event.cancelable) {
+            event.preventDefault(); // 阻止默认的纵向滚动行为
+          }
+    
+          scrollContainer.scrollLeft -= diffX; // 强制横向滚动
+        }
+      }, { passive: false });
+    });
+    
+  }, [])
 
   return (
     <div className='home'>
