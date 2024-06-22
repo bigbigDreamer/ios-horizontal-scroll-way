@@ -35,7 +35,6 @@
   grid-template-columns: repeat(auto-fill, 300px);
   grid-auto-flow: column;
   grid-gap: 12px;
-  margin-top: 300px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
     white-space: nowrap;
