@@ -27,8 +27,8 @@ function App() {
         const diffX = moveX - startX;
         const diffY = moveY - startY;
     
-        if (Math.abs(diffX) > Math.abs(diffY)) {
-          console.log(event.cancelable)
+        if (startY > 0 && Math.abs(diffX) > Math.abs(diffY)) {
+          console.log(event.cancelable , startX, moveX, moveY, startY)
           if (event.cancelable) {
             event.preventDefault(); // 阻止默认的纵向滚动行为
           }
