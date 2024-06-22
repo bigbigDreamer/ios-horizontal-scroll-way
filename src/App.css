@@ -26,6 +26,7 @@
   -webkit-overflow-scrolling: touch;
     white-space: nowrap;
     scroll-snap-type: x mandatory; /* 启用滚动捕捉 */
+    touch-action: pan-x; /* 允许横向滚动 */
 
 }
 
