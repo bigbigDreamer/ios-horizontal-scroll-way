@@ -13,11 +13,32 @@ const couponData = [
 function App() {
 
   return (
-    <div className='container'>
+    <div className='home'>
+      <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
+      </div>
+      <div className='container'>
       <div className='wrapper'>
         {couponData.map(item => (
           <div className='coupon'>{item.name}</div>
         ))}
+      </div>
+    </div>
+    <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
+      </div>
+      <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
+      </div>
+      <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
+      </div>
+
+      <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
+      </div>
+      <div>
+        <img src='https://bigdreamerblog.oss-cn-beijing.aliyuncs.com/nextBlog/clHVKl.png' className='demo-img'/>
       </div>
     </div>
   )
